@@ -1,0 +1,48 @@
+
+<div class="container">
+   <div class="card mt-5">
+      <h5 class="card-header">Order Form</h5>
+      <div class="card-body">          
+
+         <%= form_for :order do |f| %>
+         <div class="form-group row">
+            
+            <div class="col-12">            
+               <label for="name">Name</label> <%= f.text_field :name, required: true, class: "form-control" %>
+            </div>
+         
+            <div class="col-12">         
+               <label for="email" class="mt-2">Email</label> <%= f.email_field :email, required: true, class: "form-control" %> 
+            </div>
+         
+            <div class="col-12">      
+               <label for="address-line_1" class="mt-2">Address - Building</label> <%= f.text_field :address_line_1, required: true, class: "form-control" %> 
+            </div>
+         
+            <div class="col-12">            
+               <label for="address-line_2" class="mt-2"> Address - Road</label> <%= f.text_field :address_line_2, required: true, class: "form-control" %>
+            </div>
+         
+            <div class="col-12">            
+               <label for="address-town" class="mt-2">Address - Town</label> <%= f.text_field :address_town, required: true, class: "form-control" %>
+            </div>
+         
+            <div class="col-12">            
+               <label for="address-district" class="mt-2">Address - District</label> <%= f.text_field :address_district, required: true, class: "form-control" %>
+            </div>
+         
+            <div class="col-12">            
+               <label for="address-postcode" class="mt-2">Address - Postcode</label> <%= f.text_field :address_postcode, required: true, class: "form-control" %>
+            </div>
+         
+            <div class="col-12 mt-2">            
+            <%= f.submit %>
+            </div>
+         </div>
+         <% end %>
+      </div>
+   </div>
+</div>
+   
+
+  
